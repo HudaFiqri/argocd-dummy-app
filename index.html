@@ -1,0 +1,41 @@
+<!-- File: src/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Web Application</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .container {
+            background: rgba(255,255,255,0.1);
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        h1 { margin-bottom: 20px; }
+        .info { margin: 20px 0; opacity: 0.8; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 My Web Application</h1>
+        <p>Deployed via ArgoCD GitOps!</p>
+        <div class="info">
+            <p><strong>Version:</strong> 1.0.0</p>
+            <p><strong>Environment:</strong> Production</p>
+            <p><strong>Deployed:</strong> <span id="date"></span></p>
+        </div>
+    </div>
+    <script>
+        document.getElementById('date').textContent = new Date().toLocaleString();
+    </script>
+</body>
+</html>
